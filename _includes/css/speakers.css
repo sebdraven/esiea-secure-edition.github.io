@@ -7,7 +7,15 @@ table {
     padding: 8px;
     text-align: center; /* Centrer le contenu */
   }
+
+  .dark {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  tr:hover td {
+    background-color: rgba(0, 0, 0, 0.1); /* Opacité de 90% */
+  }
   
-   section#speakers {
-       background-color: rgb(225, 233, 246);
-   }
+  section#speakers {
+    background-color: rgb(225, 233, 246);
+  }
