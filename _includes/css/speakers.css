@@ -19,3 +19,10 @@ table {
   section#speakers {
     background-color: rgb(225, 233, 246);
   }
+
+  @media only screen and (max-width: 600px) {
+    tr#team {
+        display: flex;
+        flex-direction: column;
+    }
+  }
