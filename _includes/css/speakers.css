@@ -21,6 +21,10 @@ table {
   }
 
   @media only screen and (max-width: 600px) {
+    table#team-table {
+        display: flex;
+        justify-content: center;
+    }
     tr#team {
         display: flex;
         flex-direction: column;
