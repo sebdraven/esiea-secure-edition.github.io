@@ -24,6 +24,6 @@ table {
     tr#team {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: baseline;
     }
   }
