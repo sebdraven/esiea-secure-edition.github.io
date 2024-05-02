@@ -12,10 +12,22 @@ table {
     background-color: rgba(0, 0, 0, 0.1);
   }
 
-  tr:hover td {
+  tr:hover#speakers td {
     background-color: rgba(0, 0, 0, 0.1); /* Opacité de 90% */
   }
   
   section#speakers {
     background-color: rgb(225, 233, 246);
+  }
+
+  @media only screen and (max-width: 600px) {
+    table#team-table {
+        display: flex;
+        justify-content: center;
+    }
+    tr#team {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
   }
