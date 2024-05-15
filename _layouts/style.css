@@ -4,4 +4,5 @@
 {% include css/cfp.css %}
 {% include css/speakers.css %}
 {% include css/partners.css %}
+{% include css/team.css %}
 {{ content }}
