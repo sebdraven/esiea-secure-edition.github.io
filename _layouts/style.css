@@ -5,5 +5,5 @@
 {% include css/cfp.css %}
 {% include css/planning.css %}
 {% include css/partners.css %}
-{% include css/team.css %}
+{% include css/inscription.css %}
 {{ content }}
