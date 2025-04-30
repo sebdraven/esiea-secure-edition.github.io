@@ -26,3 +26,7 @@ body {
 .page-logo {
     width: 200px;
   }
+
+section#inscription {
+  background-color: rgb(225, 233, 246);
+}
