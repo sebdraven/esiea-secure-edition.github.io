@@ -12,11 +12,11 @@ th, td {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-tr:hover#speakers td {
+tr:hover.planning td {
   background-color: rgba(0, 0, 0, 0.1); /* Opacité de 90% */
 }
 
-section#speakers {
+section#planning {
   background-color: rgb(225, 233, 246);
 }
 
