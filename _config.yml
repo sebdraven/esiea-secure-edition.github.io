@@ -4,17 +4,13 @@ baseurl: ""
 # Site settings
 title: ESIEA Secure Edition
 email: ese@esiea.fr
-description: "Conférences et ateliers sur la sécurité informatique et le hacking #ESE10"
+description: "Conférences et ateliers sur la cybersécurité #ESE14"
 
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: twitter
-    url: https://twitter.com/EsieaSecEdit
-  - title: facebook
-    url: https://www.facebook.com/esiea.secure.edition
   - title: linkedin
-    url: https://www.linkedin.com/company/19056710
+    url: https://www.linkedin.com/company/esiea-secure-edition/
 
 # Postal address (add as many lines as necessary)
 address:
