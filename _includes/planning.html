@@ -1,198 +1,146 @@
-<section id="planning" class="planning-section-dark">
-    <div class="planning-bg-deco" aria-hidden="true"></div>
+<section id="planning">
+    <div class="container">
+        <div class="col-lg-12">
+            <h2 class="section-heading text-center">Planning</h2>
+            <p class="text-center text-muted">Samedi 30 mai 2026 &middot; ESIEA &middot; Ivry-sur-Seine</p>
 
-    <div class="planning-wrapper">
+            <div class="planning-app">
 
-        <header class="planning-header">
-            <p class="planning-eyebrow">ESE &middot; 14<sup>e</sup> &eacute;dition</p>
-            <h2 class="planning-title">Planning</h2>
-            <p class="planning-meta">Samedi 30 mai 2026 &middot; ESIEA &middot; Ivry-sur-Seine</p>
-        </header>
+                <nav class="planning-filters" role="tablist" aria-label="Filtrer par th&eacute;matique">
+                    <button class="planning-pill is-active" data-filter="all" type="button">Tout</button>
+                    <button class="planning-pill" data-filter="reverse" type="button">Reverse &amp; Exploitation</button>
+                    <button class="planning-pill" data-filter="hardware" type="button">Hardware</button>
+                    <button class="planning-pill" data-filter="defense" type="button">D&eacute;fense &amp; Confiance</button>
+                    <button class="planning-pill" data-filter="cognitive" type="button">Cognitive</button>
+                </nav>
 
-        <nav class="planning-filters" role="tablist" aria-label="Filtrer par th&eacute;matique">
-            <button class="planning-pill is-active" data-filter="all" type="button">Tout</button>
-            <button class="planning-pill" data-filter="reverse" type="button">Reverse &amp; Exploitation</button>
-            <button class="planning-pill" data-filter="hardware" type="button">Hardware</button>
-            <button class="planning-pill" data-filter="defense" type="button">D&eacute;fense &amp; Confiance</button>
-            <button class="planning-pill" data-filter="cognitive" type="button">Cognitive</button>
-        </nav>
+                <ol class="planning-timeline">
 
-        <ol class="planning-timeline">
+                    <li class="slot is-break">
+                        <div class="slot-time"><span class="time-from">09h15</span><span class="time-to">10h00</span></div>
+                        <div class="slot-content"><p class="slot-label">Accueil</p></div>
+                    </li>
 
-            <li class="slot is-break">
-                <div class="slot-time"><span class="time-from">09h15</span><span class="time-to">10h00</span></div>
-                <div class="slot-content"><p class="slot-label">Accueil</p></div>
-            </li>
+                    <li class="slot is-intro">
+                        <div class="slot-time"><span class="time-from">10h00</span><span class="time-to">10h05</span></div>
+                        <div class="slot-content">
+                            <p class="slot-label">Ouverture de l'ESE</p>
+                            <p class="slot-sub">S&eacute;bastien Larinier &amp; Vincent Guyot</p>
+                        </div>
+                    </li>
 
-            <li class="slot is-intro">
-                <div class="slot-time"><span class="time-from">10h00</span><span class="time-to">10h05</span></div>
-                <div class="slot-content">
-                    <p class="slot-label">Ouverture de l'ESE</p>
-                    <p class="slot-sub">S&eacute;bastien Larinier &amp; Vincent Guyot</p>
-                </div>
-            </li>
+                    <li class="slot is-talk" data-cat="reverse" data-conf="conf1">
+                        <div class="slot-time"><span class="time-from">10h05</span><span class="time-to">10h45</span></div>
+                        <div class="slot-content">
+                            <span class="slot-tag">Reverse &amp; Exploitation</span>
+                            <p class="slot-title">Drivers Vulnerability</p>
+                            <p class="slot-speaker">Quarkslab</p>
+                        </div>
+                    </li>
 
-            <li class="slot is-talk" data-cat="reverse" data-conf="conf1">
-                <div class="slot-time"><span class="time-from">10h05</span><span class="time-to">10h45</span></div>
-                <div class="slot-content">
-                    <span class="slot-tag">Reverse &amp; Exploitation</span>
-                    <p class="slot-title">Drivers Vulnerability</p>
-                    <p class="slot-speaker">Quarkslab</p>
-                </div>
-            </li>
+                    <li class="slot is-talk" data-cat="reverse" data-conf="conf2">
+                        <div class="slot-time"><span class="time-from">10h45</span><span class="time-to">11h25</span></div>
+                        <div class="slot-content">
+                            <span class="slot-tag">Reverse &amp; Exploitation</span>
+                            <p class="slot-title">Le GOAT&nbsp;: analyse dynamique de malware Windows</p>
+                            <p class="slot-speaker">Pierre Marty &middot; LORIA</p>
+                        </div>
+                    </li>
 
-            <li class="slot is-talk" data-cat="reverse" data-conf="conf2">
-                <div class="slot-time"><span class="time-from">10h45</span><span class="time-to">11h25</span></div>
-                <div class="slot-content">
-                    <span class="slot-tag">Reverse &amp; Exploitation</span>
-                    <p class="slot-title">Le GOAT&nbsp;: analyse dynamique de malware Windows</p>
-                    <p class="slot-speaker">Pierre Marty &middot; LORIA</p>
-                </div>
-            </li>
+                    <li class="slot is-break">
+                        <div class="slot-time"><span class="time-from">11h25</span><span class="time-to">11h40</span></div>
+                        <div class="slot-content"><p class="slot-label">Pause</p></div>
+                    </li>
 
-            <li class="slot is-break">
-                <div class="slot-time"><span class="time-from">11h25</span><span class="time-to">11h40</span></div>
-                <div class="slot-content"><p class="slot-label">Pause</p></div>
-            </li>
+                    <li class="slot is-talk" data-cat="hardware" data-conf="conf5">
+                        <div class="slot-time"><span class="time-from">11h40</span><span class="time-to">12h20</span></div>
+                        <div class="slot-content">
+                            <span class="slot-tag">Hardware Security</span>
+                            <p class="slot-title">Reverse d'un outil de bypass de protection JTAG</p>
+                            <p class="slot-speaker">Mathieu Renard &middot; Twisted Wires</p>
+                        </div>
+                    </li>
 
-            <li class="slot is-talk" data-cat="hardware" data-conf="conf5">
-                <div class="slot-time"><span class="time-from">11h40</span><span class="time-to">12h20</span></div>
-                <div class="slot-content">
-                    <span class="slot-tag">Hardware Security</span>
-                    <p class="slot-title">Reverse d'un outil de bypass de protection JTAG</p>
-                    <p class="slot-speaker">Mathieu Renard &middot; Twisted Wires</p>
-                </div>
-            </li>
+                    <li class="slot is-talk" data-cat="hardware" data-conf="conf6">
+                        <div class="slot-time"><span class="time-from">12h20</span><span class="time-to">13h00</span></div>
+                        <div class="slot-content">
+                            <span class="slot-tag">Hardware Security</span>
+                            <p class="slot-title">Le NFC &agrave; longue distance&nbsp;?!</p>
+                            <p class="slot-speaker">Cyrielle Guilliot</p>
+                        </div>
+                    </li>
 
-            <li class="slot is-talk" data-cat="hardware" data-conf="conf6">
-                <div class="slot-time"><span class="time-from">12h20</span><span class="time-to">13h00</span></div>
-                <div class="slot-content">
-                    <span class="slot-tag">Hardware Security</span>
-                    <p class="slot-title">Le NFC &agrave; longue distance&nbsp;?!</p>
-                    <p class="slot-speaker">Cyrielle Guilliot</p>
-                </div>
-            </li>
+                    <li class="slot is-break is-lunch">
+                        <div class="slot-time"><span class="time-from">13h00</span><span class="time-to">14h15</span></div>
+                        <div class="slot-content"><p class="slot-label">Pause d&eacute;jeuner</p></div>
+                    </li>
 
-            <li class="slot is-break is-lunch">
-                <div class="slot-time"><span class="time-from">13h00</span><span class="time-to">14h15</span></div>
-                <div class="slot-content"><p class="slot-label">Pause d&eacute;jeuner</p></div>
-            </li>
+                    <li class="slot is-talk" data-cat="hardware" data-conf="conf8">
+                        <div class="slot-time"><span class="time-from">14h15</span><span class="time-to">14h55</span></div>
+                        <div class="slot-content">
+                            <span class="slot-tag">Hardware Security</span>
+                            <p class="slot-title">Sniffing de TPM&nbsp;: th&eacute;orie et pratique</p>
+                            <p class="slot-speaker">Cyril Thomas (BabdCatha) &middot; XMCO</p>
+                        </div>
+                    </li>
 
-            <li class="slot is-talk" data-cat="hardware" data-conf="conf8">
-                <div class="slot-time"><span class="time-from">14h15</span><span class="time-to">14h55</span></div>
-                <div class="slot-content">
-                    <span class="slot-tag">Hardware Security</span>
-                    <p class="slot-title">Sniffing de TPM&nbsp;: th&eacute;orie et pratique</p>
-                    <p class="slot-speaker">Cyril Thomas (BabdCatha) &middot; XMCO</p>
-                </div>
-            </li>
+                    <li class="slot is-talk" data-cat="defense" data-conf="conf3">
+                        <div class="slot-time"><span class="time-from">14h55</span><span class="time-to">15h35</span></div>
+                        <div class="slot-content">
+                            <span class="slot-tag">D&eacute;fense &amp; Confiance</span>
+                            <p class="slot-title">Tout syst&egrave;me non test&eacute; est r&eacute;put&eacute; ne pas fonctionner</p>
+                            <p class="slot-speaker">Christophe Rieunier &middot; CERT La Poste</p>
+                        </div>
+                    </li>
 
-            <li class="slot is-talk" data-cat="defense" data-conf="conf3">
-                <div class="slot-time"><span class="time-from">14h55</span><span class="time-to">15h35</span></div>
-                <div class="slot-content">
-                    <span class="slot-tag">D&eacute;fense &amp; Confiance</span>
-                    <p class="slot-title">Tout syst&egrave;me non test&eacute; est r&eacute;put&eacute; ne pas fonctionner</p>
-                    <p class="slot-speaker">Christophe Rieunier &middot; CERT La Poste</p>
-                </div>
-            </li>
+                    <li class="slot is-break">
+                        <div class="slot-time"><span class="time-from">15h35</span><span class="time-to">15h50</span></div>
+                        <div class="slot-content"><p class="slot-label">Pause</p></div>
+                    </li>
 
-            <li class="slot is-break">
-                <div class="slot-time"><span class="time-from">15h35</span><span class="time-to">15h50</span></div>
-                <div class="slot-content"><p class="slot-label">Pause</p></div>
-            </li>
+                    <li class="slot is-talk" data-cat="defense" data-conf="conf7">
+                        <div class="slot-time"><span class="time-from">15h50</span><span class="time-to">16h30</span></div>
+                        <div class="slot-content">
+                            <span class="slot-tag">D&eacute;fense &amp; Confiance</span>
+                            <p class="slot-title">Quid de la confiance dans le cadenas de votre navigateur web</p>
+                            <p class="slot-speaker">No&eacute; Roussel</p>
+                        </div>
+                    </li>
 
-            <li class="slot is-talk" data-cat="defense" data-conf="conf7">
-                <div class="slot-time"><span class="time-from">15h50</span><span class="time-to">16h30</span></div>
-                <div class="slot-content">
-                    <span class="slot-tag">D&eacute;fense &amp; Confiance</span>
-                    <p class="slot-title">Quid de la confiance dans le cadenas de votre navigateur web</p>
-                    <p class="slot-speaker">No&eacute; Roussel</p>
-                </div>
-            </li>
+                    <li class="slot is-talk" data-cat="cognitive" data-conf="conf4">
+                        <div class="slot-time"><span class="time-from">16h30</span><span class="time-to">17h10</span></div>
+                        <div class="slot-content">
+                            <span class="slot-tag">Cognitive Security</span>
+                            <p class="slot-title">Plugin DIMA</p>
+                            <p class="slot-speaker">M82 Project</p>
+                        </div>
+                    </li>
 
-            <li class="slot is-talk" data-cat="cognitive" data-conf="conf4">
-                <div class="slot-time"><span class="time-from">16h30</span><span class="time-to">17h10</span></div>
-                <div class="slot-content">
-                    <span class="slot-tag">Cognitive Security</span>
-                    <p class="slot-title">Plugin DIMA</p>
-                    <p class="slot-speaker">M82 Project</p>
-                </div>
-            </li>
+                    <li class="slot is-intro">
+                        <div class="slot-time"><span class="time-from">17h10</span><span class="time-to">17h15</span></div>
+                        <div class="slot-content">
+                            <p class="slot-label">Cl&ocirc;ture de l'ESE</p>
+                            <p class="slot-sub">S&eacute;bastien Larinier &amp; Vincent Guyot</p>
+                        </div>
+                    </li>
 
-            <li class="slot is-intro">
-                <div class="slot-time"><span class="time-from">17h10</span><span class="time-to">17h15</span></div>
-                <div class="slot-content">
-                    <p class="slot-label">Cl&ocirc;ture de l'ESE</p>
-                    <p class="slot-sub">S&eacute;bastien Larinier &amp; Vincent Guyot</p>
-                </div>
-            </li>
+                </ol>
 
-        </ol>
+                <p class="planning-hint text-center text-muted">&gt; Cliquez sur une conf&eacute;rence pour afficher son descriptif</p>
 
-        <p class="planning-hint">&gt; Cliquez sur une conf&eacute;rence pour afficher son descriptif</p>
-
+            </div>
+        </div>
     </div>
 
     <style>
-        #planning.planning-section-dark {
-            position: relative;
-            padding: 100px 24px;
-            background: #0a0e1a;
-            background-image:
-                radial-gradient(ellipse at top left, rgba(192, 132, 252, 0.10) 0%, transparent 50%),
-                radial-gradient(ellipse at bottom right, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
-                linear-gradient(180deg, #0a0e1a 0%, #0f1729 100%);
-            color: #e2e8f0;
-            overflow: hidden;
-            font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
-        }
-
-        #planning .planning-bg-deco {
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-            background-size: 60px 60px;
-            pointer-events: none;
-            mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
-            -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
-        }
-
-        #planning .planning-wrapper {
-            position: relative;
+        #planning .planning-app {
+            --cat-reverse: #a855f7;
+            --cat-hardware: #f97316;
+            --cat-defense: #0ea5e9;
+            --cat-cognitive: #22c55e;
             max-width: 880px;
-            margin: 0 auto;
-            z-index: 1;
-        }
-
-        /* ---- Header ---- */
-        #planning .planning-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        #planning .planning-eyebrow {
-            font-family: 'Roboto Mono', 'JetBrains Mono', ui-monospace, Consolas, monospace;
-            font-size: 12px;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            color: #94a3b8;
-            margin: 0 0 16px;
-        }
-        #planning .planning-eyebrow sup { font-size: 9px; }
-        #planning .planning-title {
-            font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-            font-size: 52px;
-            font-weight: 700;
-            color: #f8fafc;
-            margin: 0 0 14px;
-            letter-spacing: -0.02em;
-            line-height: 1;
-        }
-        #planning .planning-meta {
-            color: #94a3b8;
-            font-size: 15px;
-            margin: 0;
+            margin: 40px auto 0;
+            font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
         }
 
         /* ---- Filters ---- */
@@ -201,49 +149,45 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
-            margin: 0 auto 60px;
-            max-width: 800px;
+            margin-bottom: 50px;
         }
         #planning .planning-pill {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #cbd5e1;
+            background: #ffffff;
+            border: 1px solid #d8d8d8;
+            color: #555;
             border-radius: 999px;
             padding: 10px 20px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
             font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.12em;
             cursor: pointer;
             transition: all 0.25s ease;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
         }
         #planning .planning-pill:hover {
-            border-color: rgba(255, 255, 255, 0.25);
-            color: #f8fafc;
+            transform: translateY(-1px);
         }
         #planning .planning-pill.is-active {
-            background: #f8fafc;
-            border-color: #f8fafc;
-            color: #0f172a;
+            background: #2c3e50;
+            border-color: #2c3e50;
+            color: #fff;
         }
         #planning .planning-pill[data-filter="reverse"]:not(.is-active):hover {
-            border-color: #c084fc; color: #c084fc;
-            box-shadow: 0 0 24px -8px #c084fc;
+            border-color: var(--cat-reverse); color: var(--cat-reverse);
+            box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.15), 0 4px 18px -6px var(--cat-reverse);
         }
         #planning .planning-pill[data-filter="hardware"]:not(.is-active):hover {
-            border-color: #fb923c; color: #fb923c;
-            box-shadow: 0 0 24px -8px #fb923c;
+            border-color: var(--cat-hardware); color: var(--cat-hardware);
+            box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.15), 0 4px 18px -6px var(--cat-hardware);
         }
         #planning .planning-pill[data-filter="defense"]:not(.is-active):hover {
-            border-color: #38bdf8; color: #38bdf8;
-            box-shadow: 0 0 24px -8px #38bdf8;
+            border-color: var(--cat-defense); color: var(--cat-defense);
+            box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15), 0 4px 18px -6px var(--cat-defense);
         }
         #planning .planning-pill[data-filter="cognitive"]:not(.is-active):hover {
-            border-color: #4ade80; color: #4ade80;
-            box-shadow: 0 0 24px -8px #4ade80;
+            border-color: var(--cat-cognitive); color: var(--cat-cognitive);
+            box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15), 0 4px 18px -6px var(--cat-cognitive);
         }
 
         /* ---- Timeline ---- */
@@ -256,15 +200,11 @@
         #planning .planning-timeline::before {
             content: '';
             position: absolute;
-            left: 145px;
+            left: 130px;
             top: 30px;
             bottom: 30px;
-            width: 1px;
-            background: linear-gradient(180deg,
-                transparent 0%,
-                rgba(255,255,255,0.18) 10%,
-                rgba(255,255,255,0.18) 90%,
-                transparent 100%);
+            width: 2px;
+            background: linear-gradient(180deg, transparent 0%, #cbd5e1 8%, #cbd5e1 92%, transparent 100%);
         }
         #planning .slot {
             position: relative;
@@ -273,11 +213,11 @@
             margin-bottom: 16px;
             transition: opacity 0.4s ease;
         }
-        #planning .slot.is-dimmed { opacity: 0.2; }
+        #planning .slot.is-dimmed { opacity: 0.25; filter: saturate(0.4); }
 
-        /* Time block (left) */
+        /* Time */
         #planning .slot-time {
-            width: 130px;
+            width: 115px;
             flex-shrink: 0;
             display: flex;
             flex-direction: column;
@@ -289,13 +229,13 @@
         }
         #planning .time-from {
             font-size: 18px;
-            font-weight: 500;
-            color: #f8fafc;
+            font-weight: 600;
+            color: #2c3e50;
             letter-spacing: 0.02em;
         }
         #planning .time-to {
             font-size: 12px;
-            color: #64748b;
+            color: #94a3b8;
             margin-top: 3px;
         }
 
@@ -303,31 +243,29 @@
         #planning .slot::after {
             content: '';
             position: absolute;
-            left: 140px;
+            left: 125px;
             top: 50%;
             transform: translateY(-50%);
-            width: 11px;
-            height: 11px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
-            background: #1e293b;
-            border: 2px solid rgba(255,255,255,0.25);
+            background: #fff;
+            border: 2px solid #cbd5e1;
             z-index: 2;
-            transition: box-shadow 0.25s ease, transform 0.25s ease;
+            transition: box-shadow 0.25s ease;
         }
-        #planning .slot[data-cat="reverse"]::after   { background: #c084fc; border-color: #c084fc; box-shadow: 0 0 14px #c084fc; }
-        #planning .slot[data-cat="hardware"]::after  { background: #fb923c; border-color: #fb923c; box-shadow: 0 0 14px #fb923c; }
-        #planning .slot[data-cat="defense"]::after   { background: #38bdf8; border-color: #38bdf8; box-shadow: 0 0 14px #38bdf8; }
-        #planning .slot[data-cat="cognitive"]::after { background: #4ade80; border-color: #4ade80; box-shadow: 0 0 14px #4ade80; }
+        #planning .slot[data-cat="reverse"]::after   { background: var(--cat-reverse); border-color: var(--cat-reverse); box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.2), 0 0 14px var(--cat-reverse); }
+        #planning .slot[data-cat="hardware"]::after  { background: var(--cat-hardware); border-color: var(--cat-hardware); box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.2), 0 0 14px var(--cat-hardware); }
+        #planning .slot[data-cat="defense"]::after   { background: var(--cat-defense); border-color: var(--cat-defense); box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.2), 0 0 14px var(--cat-defense); }
+        #planning .slot[data-cat="cognitive"]::after { background: var(--cat-cognitive); border-color: var(--cat-cognitive); box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2), 0 0 14px var(--cat-cognitive); }
         #planning .slot.is-intro::after {
-            background: #f8fafc;
-            border-color: #f8fafc;
+            background: #2c3e50;
+            border-color: #2c3e50;
         }
         #planning .slot.is-break::after {
-            background: #334155;
-            border-color: #334155;
-            width: 7px;
-            height: 7px;
-            box-shadow: none;
+            width: 8px; height: 8px;
+            background: #94a3b8;
+            border-color: #94a3b8;
         }
 
         /* Card */
@@ -335,57 +273,51 @@
             flex: 1;
             margin-left: 30px;
             padding: 18px 24px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
             transition: all 0.25s ease;
         }
-        #planning .slot[data-cat="reverse"]   .slot-content { border-left: 3px solid #c084fc; }
-        #planning .slot[data-cat="hardware"]  .slot-content { border-left: 3px solid #fb923c; }
-        #planning .slot[data-cat="defense"]   .slot-content { border-left: 3px solid #38bdf8; }
-        #planning .slot[data-cat="cognitive"] .slot-content { border-left: 3px solid #4ade80; }
+        #planning .slot[data-cat="reverse"]   .slot-content { border-left: 4px solid var(--cat-reverse); }
+        #planning .slot[data-cat="hardware"]  .slot-content { border-left: 4px solid var(--cat-hardware); }
+        #planning .slot[data-cat="defense"]   .slot-content { border-left: 4px solid var(--cat-defense); }
+        #planning .slot[data-cat="cognitive"] .slot-content { border-left: 4px solid var(--cat-cognitive); }
 
         #planning .slot.is-talk { cursor: pointer; }
-        #planning .slot.is-talk:hover .slot-content {
-            background: rgba(255, 255, 255, 0.06);
-            transform: translateX(4px);
-        }
-        #planning .slot.is-talk[data-cat="reverse"]:hover .slot-content   { box-shadow: 0 10px 40px -12px #c084fc; }
-        #planning .slot.is-talk[data-cat="hardware"]:hover .slot-content  { box-shadow: 0 10px 40px -12px #fb923c; }
-        #planning .slot.is-talk[data-cat="defense"]:hover .slot-content   { box-shadow: 0 10px 40px -12px #38bdf8; }
-        #planning .slot.is-talk[data-cat="cognitive"]:hover .slot-content { box-shadow: 0 10px 40px -12px #4ade80; }
+        #planning .slot.is-talk:hover .slot-content { transform: translateX(3px); }
+        #planning .slot.is-talk[data-cat="reverse"]:hover .slot-content   { box-shadow: 0 10px 35px -12px var(--cat-reverse); }
+        #planning .slot.is-talk[data-cat="hardware"]:hover .slot-content  { box-shadow: 0 10px 35px -12px var(--cat-hardware); }
+        #planning .slot.is-talk[data-cat="defense"]:hover .slot-content   { box-shadow: 0 10px 35px -12px var(--cat-defense); }
+        #planning .slot.is-talk[data-cat="cognitive"]:hover .slot-content { box-shadow: 0 10px 35px -12px var(--cat-cognitive); }
 
         /* Tag */
         #planning .slot-tag {
             display: inline-block;
             font-family: 'Roboto Mono', 'JetBrains Mono', ui-monospace, Consolas, monospace;
             font-size: 10px;
-            font-weight: 500;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.18em;
+            letter-spacing: 0.15em;
             padding: 4px 10px;
             border-radius: 4px;
-            margin-bottom: 10px;
-            background: rgba(255,255,255,0.04);
+            margin-bottom: 8px;
         }
-        #planning .slot[data-cat="reverse"]   .slot-tag { color: #c084fc; border: 1px solid rgba(192, 132, 252, 0.4); }
-        #planning .slot[data-cat="hardware"]  .slot-tag { color: #fb923c; border: 1px solid rgba(251, 146, 60, 0.4); }
-        #planning .slot[data-cat="defense"]   .slot-tag { color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); }
-        #planning .slot[data-cat="cognitive"] .slot-tag { color: #4ade80; border: 1px solid rgba(74, 222, 128, 0.4); }
+        #planning .slot[data-cat="reverse"]   .slot-tag { color: #7e22ce; background: #f3e8ff; border: 1px solid rgba(168, 85, 247, 0.35); }
+        #planning .slot[data-cat="hardware"]  .slot-tag { color: #c2410c; background: #ffedd5; border: 1px solid rgba(249, 115, 22, 0.35); }
+        #planning .slot[data-cat="defense"]   .slot-tag { color: #0369a1; background: #e0f2fe; border: 1px solid rgba(14, 165, 233, 0.35); }
+        #planning .slot[data-cat="cognitive"] .slot-tag { color: #15803d; background: #dcfce7; border: 1px solid rgba(34, 197, 94, 0.35); }
 
         #planning .slot-title {
             font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 700;
-            color: #f8fafc;
+            color: #2c3e50;
             margin: 0 0 4px;
             line-height: 1.4;
         }
         #planning .slot-speaker {
             font-size: 14px;
-            color: #94a3b8;
+            color: #7f8c8d;
             margin: 0;
             font-style: italic;
         }
@@ -396,24 +328,22 @@
             background: transparent;
             border: none;
             padding: 12px 24px;
-            -webkit-backdrop-filter: none;
-            backdrop-filter: none;
         }
         #planning .slot.is-break .slot-label {
-            color: #64748b;
+            color: #94a3b8;
             font-style: italic;
             font-size: 14px;
             margin: 0;
         }
         #planning .slot.is-intro .slot-label {
-            color: #f8fafc;
+            color: #2c3e50;
             font-weight: 700;
             font-size: 16px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
             margin: 0 0 4px;
         }
         #planning .slot.is-intro .slot-sub {
-            color: #94a3b8;
+            color: #7f8c8d;
             font-style: italic;
             font-size: 13px;
             margin: 0;
@@ -421,31 +351,19 @@
 
         /* Hint */
         #planning .planning-hint {
-            text-align: center;
-            margin: 60px 0 0;
-            color: #475569;
-            font-size: 13px;
+            margin-top: 50px;
             font-family: 'Roboto Mono', 'JetBrains Mono', ui-monospace, Consolas, monospace;
+            font-size: 13px;
             letter-spacing: 0.05em;
         }
 
         /* ---- Responsive (mobile) ---- */
         @media (max-width: 700px) {
-            #planning.planning-section-dark { padding: 60px 16px; }
-            #planning .planning-title { font-size: 36px; }
-            #planning .planning-header { margin-bottom: 30px; }
-            #planning .planning-filters { margin-bottom: 40px; }
-            #planning .planning-timeline::before { left: 20px; }
-            #planning .slot {
-                flex-direction: column;
-                padding-left: 45px;
-                margin-bottom: 14px;
-            }
-            #planning .slot::after {
-                left: 15px;
-                top: 18px;
-                transform: none;
-            }
+            #planning .planning-app { margin-top: 30px; }
+            #planning .planning-filters { margin-bottom: 30px; }
+            #planning .planning-timeline::before { left: 16px; }
+            #planning .slot { flex-direction: column; padding-left: 40px; margin-bottom: 14px; }
+            #planning .slot::after { left: 11px; top: 18px; transform: none; }
             #planning .slot-time {
                 width: auto;
                 flex-direction: row;
@@ -456,8 +374,7 @@
                 margin-bottom: 6px;
             }
             #planning .time-from { font-size: 16px; }
-            #planning .time-to { font-size: 12px; }
-            #planning .time-to::before { content: '\2192'; margin-right: 4px; color: #475569; }
+            #planning .time-to::before { content: '\2192'; margin-right: 4px; color: #94a3b8; }
             #planning .slot-content { margin-left: 0; padding: 14px 18px; }
             #planning .planning-pill { font-size: 11px; padding: 8px 14px; letter-spacing: 0.08em; }
         }
