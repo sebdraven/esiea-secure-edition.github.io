@@ -2,10 +2,6 @@ body {
   margin-top: 60px;
 }
 
-section#cfp {
-  background-color: rgb(225, 233, 246);
-}
-
 ul {
   display: block;
   list-style-type: disc;

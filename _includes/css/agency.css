@@ -880,5 +880,5 @@ section {
     background-color: #ffffff;
 }
 section:nth-of-type(even) {
-    background-color: #eef1f7;
+    background-color: rgb(225, 233, 246);
 }
