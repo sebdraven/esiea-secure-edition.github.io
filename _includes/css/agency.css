@@ -874,3 +874,11 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
+
+/* Alternance automatique des sections : blanc / lavande pâle */
+section {
+    background-color: #ffffff;
+}
+section:nth-of-type(even) {
+    background-color: #eef1f7;
+}
