@@ -128,6 +128,14 @@
 
                 <p class="planning-hint text-center text-muted">&gt; Cliquez sur une conf&eacute;rence pour afficher son descriptif</p>
 
+                <div id="planning-modal" class="planning-modal" role="dialog" aria-modal="true" aria-hidden="true">
+                    <div class="planning-modal-backdrop"></div>
+                    <div class="planning-modal-card">
+                        <button type="button" class="planning-modal-close" aria-label="Fermer">&times;</button>
+                        <div id="planning-modal-body" class="planning-modal-body"></div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -357,6 +365,111 @@
             letter-spacing: 0.05em;
         }
 
+        /* ---- Modal ---- */
+        #planning .planning-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        #planning .planning-modal.is-open {
+            display: flex;
+            animation: planning-modal-fade 0.2s ease;
+        }
+        @keyframes planning-modal-fade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        #planning .planning-modal-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.65);
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+            cursor: pointer;
+        }
+        #planning .planning-modal-card {
+            position: relative;
+            background: #fff;
+            border-radius: 14px;
+            max-width: 720px;
+            width: 100%;
+            max-height: 85vh;
+            padding: 44px 44px 36px;
+            box-shadow: 0 30px 80px -20px rgba(0,0,0,0.45);
+            overflow-y: auto;
+            animation: planning-modal-slide 0.25s ease;
+        }
+        @keyframes planning-modal-slide {
+            from { opacity: 0; transform: translateY(20px) scale(0.96); }
+            to { opacity: 1; transform: none; }
+        }
+        #planning .planning-modal[data-cat="reverse"]   .planning-modal-card { border-top: 4px solid var(--cat-reverse); }
+        #planning .planning-modal[data-cat="hardware"]  .planning-modal-card { border-top: 4px solid var(--cat-hardware); }
+        #planning .planning-modal[data-cat="defense"]   .planning-modal-card { border-top: 4px solid var(--cat-defense); }
+        #planning .planning-modal[data-cat="cognitive"] .planning-modal-card { border-top: 4px solid var(--cat-cognitive); }
+        #planning .planning-modal-close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: transparent;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+            color: #94a3b8;
+            line-height: 1;
+            padding: 0;
+            transition: all 0.2s ease;
+        }
+        #planning .planning-modal-close:hover {
+            background: #f1f5f9;
+            color: #0f172a;
+        }
+        #planning .planning-modal-body { color: #2c3e50; }
+        #planning .planning-modal-body h3 {
+            font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin: 0 0 14px;
+            line-height: 1.3;
+        }
+        #planning .planning-modal-body p {
+            color: #475569;
+            font-size: 15px;
+            line-height: 1.65;
+            margin: 0 0 12px;
+        }
+        #planning .planning-modal-body a {
+            color: #0369a1;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+        }
+        #planning .planning-modal-body a:hover { color: #075985; }
+        #planning .planning-modal-body br { display: none; }
+        #planning .planning-modal-tag {
+            display: inline-block;
+            font-family: 'Roboto Mono', 'JetBrains Mono', ui-monospace, Consolas, monospace;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: 5px 12px;
+            border-radius: 4px;
+            margin-bottom: 18px;
+        }
+        #planning .planning-modal[data-cat="reverse"]   .planning-modal-tag { color: #7e22ce; background: #f3e8ff; border: 1px solid rgba(168, 85, 247, 0.35); }
+        #planning .planning-modal[data-cat="hardware"]  .planning-modal-tag { color: #c2410c; background: #ffedd5; border: 1px solid rgba(249, 115, 22, 0.35); }
+        #planning .planning-modal[data-cat="defense"]   .planning-modal-tag { color: #0369a1; background: #e0f2fe; border: 1px solid rgba(14, 165, 233, 0.35); }
+        #planning .planning-modal[data-cat="cognitive"] .planning-modal-tag { color: #15803d; background: #dcfce7; border: 1px solid rgba(34, 197, 94, 0.35); }
+
         /* ---- Responsive (mobile) ---- */
         @media (max-width: 700px) {
             #planning .planning-app { margin-top: 30px; }
@@ -376,6 +489,8 @@
             #planning .time-from { font-size: 16px; }
             #planning .time-to::before { content: '\2192'; margin-right: 4px; color: #94a3b8; }
             #planning .slot-content { margin-left: 0; padding: 14px 18px; }
+            #planning .planning-modal-card { padding: 32px 22px 24px; max-height: 90vh; }
+            #planning .planning-modal-body h3 { font-size: 20px; }
             #planning .planning-pill { font-size: 11px; padding: 8px 14px; letter-spacing: 0.08em; }
         }
     </style>
@@ -414,15 +529,49 @@
                 });
             });
 
+            var modal = document.getElementById('planning-modal');
+            var modalBody = document.getElementById('planning-modal-body');
+            var modalClose = section.querySelector('.planning-modal-close');
+            var modalBackdrop = section.querySelector('.planning-modal-backdrop');
+
+            function openModal(slot) {
+                var confId = slot.getAttribute('data-conf');
+                var cat = slot.getAttribute('data-cat');
+                var src = document.getElementById(confId);
+                if (!src || !modal) return;
+                var tagEl = slot.querySelector('.slot-tag');
+                var tagText = tagEl ? tagEl.textContent : '';
+                var html = '';
+                if (tagText) {
+                    html += '<span class="planning-modal-tag">' + tagText + '</span>';
+                }
+                html += src.innerHTML;
+                modalBody.innerHTML = html;
+                modal.setAttribute('data-cat', cat || '');
+                modal.classList.add('is-open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                if (!modal) return;
+                modal.classList.remove('is-open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            if (modalClose) modalClose.addEventListener('click', closeModal);
+            if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal && modal.classList.contains('is-open')) {
+                    closeModal();
+                }
+            });
+
             slots.forEach(function(slot) {
                 if (!slot.classList.contains('is-talk')) return;
                 slot.addEventListener('click', function() {
-                    var target = slot.getAttribute('data-conf');
-                    if (!target) return;
-                    var el = document.getElementById(target);
-                    if (el) {
-                        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
+                    openModal(slot);
                 });
             });
         })();
